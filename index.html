@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header><h1>📝 Student To-Do List</h1><p>Plan tasks with a start date and end date.</p></header>
+    <form id="task-form">
+      <label for="task-input">Task name</label>
+      <input id="task-input" type="text" placeholder="Enter your task" required maxlength="160">
+      <div class="date-row">
+        <div><label for="from-date">From date</label><input id="from-date" type="date" required><small id="from-day" class="day-label">Choose a start date</small></div>
+        <div><label for="to-date">To date</label><input id="to-date" type="date" required><small id="to-day" class="day-label">Choose an end date</small></div>
+      </div>
+      <button type="submit">Add Task</button><p id="form-error" class="error" role="alert"></p>
+    </form>
+    <section class="summary"><span id="task-count">0 tasks</span><button id="clear-completed" class="secondary" type="button">Clear completed</button></section>
+    <ul id="task-list" aria-live="polite"></ul><p id="empty-state" class="empty">No tasks yet. Add your first task above!</p>
+    <footer>Tasks are saved in this browser on this device.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
